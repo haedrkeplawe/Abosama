@@ -1,0 +1,381 @@
+/* all */
+:root {
+    --color-orange: #c3976a;
+    --color-green: #327274;
+}
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    scroll-behavior: smooth;
+}
+body {
+    font-family: "Cairo", sans-serif;
+    background-color: var(--color-green);
+}
+ul, li {
+    list-style: none;
+}
+button, a {
+    cursor: pointer;
+}
+a {
+    color: white;
+    text-decoration: none;
+}
+nav {
+    background-color: var(--color-orange);
+    color: white;
+    padding: 1rem 2rem;
+    overflow: hidden;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+nav button {
+    width: 25px;
+    display: none;
+    background: none;
+    border: none;
+    color: white;
+    position: absolute;
+    top: 18px;
+    right: 31px;
+    transition: 0.3s;
+}
+nav button.open svg:nth-child(2) {
+    display: none;
+}
+nav button.close svg:nth-child(1) {
+    display: none;
+}
+nav ul {
+    display: flex;
+    font-weight: 600;
+    transition: 0.5s;
+}
+nav ul li {
+    margin: 0 15px;
+    cursor: pointer;
+    transition: 0.5s;
+}
+nav ul li a {
+    transition: 0.3s;
+}
+nav ul li a:hover, nav button:hover {
+    color: black;
+}
+nav>a {
+    width: 30px;
+    border-radius: 50%;
+    height: 30px;
+    overflow: hidden;
+}
+nav>a img {
+    max-width: 100%;
+}
+footer {
+    background-color: var(--color-orange);
+}
+footer .icons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    padding: 14px;
+}
+footer .icons img {
+    width: 30px;
+}
+@media (max-width:424px) {
+    nav ul {
+        position: relative;
+    }
+    nav ul li {
+        margin: 0 5px;
+        font-size: 14px;
+    }
+}
+/* index-page */
+/* present  section*/
+.index-page section.main {
+    display: grid;
+    grid-template-columns: 70% 30%;
+    padding: 3rem 1rem;
+    align-items: center;
+    color: white;
+    overflow: hidden;
+    background-position: right;
+    background-size: 660px;
+}
+.index-page section.main img {
+    width: 100%;
+    min-width: 356px;
+    position: relative;
+}
+.index-page section.main .text h2 {
+    color: var(--color-orange);
+    word-spacing: 4px;
+}
+.index-page section.main .text p {
+    font-weight: 600;
+    font-size: 20px;
+    max-width: 453px;
+}
+.index-page section.main .text .buttons {
+    margin-top: 20px;
+}
+.index-page section.main .text .buttons a {
+    padding: 6px 20px;
+    border-radius: 15px;
+}
+.index-page section.main .text .buttons a.login {
+    border: 1px solid transparent;
+    background: var(--color-orange);
+}
+.index-page section.main .text .buttons a.login:hover {
+    border: 1px solid var(--color-orange);
+    background: none;
+}
+.index-page section.main .text .buttons a.register {
+    border: 1px solid var(--color-orange);
+}
+.index-page section.main .text .buttons a.register:hover {
+    border: 1px solid transparent;
+    background: var(--color-orange);
+}
+@media (max-width:991px) {
+    .index-page section.main img {
+        left: -73px;
+    }
+}
+@media (max-width:656px) {
+    .index-page section.main {
+        grid-template-columns: 100%;
+        text-align: center;
+    }
+    .index-page section.main img {
+        display: none;
+    }
+    .index-page section.main .text p {
+        max-width: 453px;
+        margin: auto;
+    }
+}
+/* subject section  */
+.index-page section.subject {
+    background-color: #eee;
+    padding: 5rem 0;
+}
+.index-page section.subject .container {
+    display: grid;
+    grid-template-columns: 33% 33% 33%;
+    margin: 0px auto;
+    max-width: 900px;
+    gap: 2rem;
+    justify-content: center;
+}
+.index-page section.subject .container a {
+    position: relative;
+    border-radius: 35px;
+    overflow: hidden;
+    display: flex;
+    box-shadow: 6px 5px 13px 0px #0000004f;
+}
+.index-page section.subject .container a p {
+    position: absolute;
+    background: white;
+    color: black;
+    bottom: 7px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 3px 16px;
+    border-radius: 15px;
+    font-weight: 600;
+    font-size: 18px;
+    transition: 0.3s;
+}
+.index-page section.subject .container img {
+    max-width: 100%;
+    transition: 0.3s;
+}
+.index-page section.subject .container a:hover img {
+    transform: scale(1.1);
+}
+.index-page section.subject .container a:hover p {
+    opacity: 0.7;
+}
+@media (max-width:991px) {
+    .index-page section.subject .container {
+        grid-template-columns: 50% 50%;
+        max-width: 640px;
+    }
+}
+@media (max-width: 767px) {
+    .index-page section.subject .container {
+        padding: 0 40px;
+    }
+}
+@media (max-width:424px) {
+    .index-page section.subject .container {
+        grid-template-columns: 100%;
+    }
+}
+/* instructions  section*/
+.index-page section.instructions {
+    background-color: #eee;
+    background-image: url(../img/٢٠٢٤٠٤٣٠_٢١٥٠٠٣.png);
+    display: grid;
+    grid-template-columns: 30% 70%;
+    padding: 5rem 0;
+    background-size: cover;
+    background-position: bottom;
+    position: relative;
+}
+.index-page section.instructions div.background {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: white;
+    opacity: 0.4;
+}
+.index-page section.instructions img.background {
+    position: absolute;
+    width: 56%;
+    height: 100%;
+    z-index: 0;
+}
+.index-page section.instructions .text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1rem;
+    z-index: 1;
+}
+.index-page section.instructions .text .card {
+    display: flex;
+    align-items: center;
+}
+.index-page section.instructions img {
+    width: 100%;
+    z-index: 1;
+}
+.index-page section.instructions .text span {
+    background: var(--color-green);
+    color: white;
+    padding: 0px 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    font-size: 20px;
+    font-weight: 800;
+    border: 3px solid var(--color-orange);
+    margin-right: 10px;
+    position: relative;
+}
+.index-page section.instructions .card:not(:last-child) span:before {
+    content: "";
+    position: absolute;
+    background: var(--color-orange);
+    width: 3px;
+    height: 100%;
+    bottom: -40px;
+    z-index: -1;
+}
+.index-page section.instructions .text h2 {
+    font-weight: 600;
+    line-height: 27px;
+    max-width: 600px;
+    font-size: 20px;
+}
+@media (max-width:656px) {
+    .index-page section.instructions img {
+        display: none;
+    }
+    .index-page section.instructions {
+        grid-template-columns: 100%;
+        padding: 8rem 0.5rem;
+    }
+}
+@media (max-width:545px) {
+    .index-page section.instructions .text h2 {
+        font-size: 16px;
+    }
+    .index-page section.instructions .text span {
+        padding: 3px 9px;
+        font-size: 18px;
+        font-weight: 600;
+        border: 2px solid var(--color-orange);
+    }
+    .index-page section.instructions .card:not(:last-child) span:before {
+        height: 171%;
+        bottom: -47px;
+    }
+}
+/* login page */
+.login-page {
+    background: #d9d3d3;
+}
+.login-page svg {
+    height: 25px;
+    border-radius: 50%;
+    border: 1px solid indianred;
+    padding: 2px;
+}
+.login-page .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 90vh;
+    align-items: center;
+    gap: 1rem;
+}
+.login-page .container form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    color: indianred;
+}
+.login-page .container form .image {
+    background: white;
+    height: 99px;
+    width: 99px;
+    border-radius: 50%;
+    margin: auto;
+    border: 2px solid var(--color-green);
+    position: relative;
+}
+.login-page .container form .image svg {
+    border: white;
+    color: white;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    background: var(--color-green);
+    padding: 4px;
+    height: 30px;
+}
+.login-page .container .input {
+    display: flex;
+    gap: 5px;
+    align-items: center;
+}
+.login-page .container .input input {
+    background: none;
+    border: 1px solid var(--color-green);
+    border-radius: 15px;
+    padding: 7px 10px;
+}
+.login-page .container form button {
+    background: var(--color-green);
+    color: white;
+    width: fit-content;
+    padding: 7px 15px;
+    margin: auto;
+    border: navajowhite;
+    border-radius: 15px;
+}
+.login-page .container a {
+    color: indianred;
+}
