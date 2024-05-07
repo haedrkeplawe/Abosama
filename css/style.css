@@ -379,3 +379,6 @@ footer .icons img {
 .login-page .container a {
     color: indianred;
 }
+.login-page .container .input input:focus {
+  outline: none;
+}
